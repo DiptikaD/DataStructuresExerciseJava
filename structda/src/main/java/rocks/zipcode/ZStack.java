@@ -1,6 +1,6 @@
 package rocks.zipcode;
 
-public interface ZStack<T> {
+public interface ZStack<T>{
 
     // Pushes an element onto the top of the stack
     void push(T item);

@@ -1,9 +1,16 @@
 package rocks.zipcode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class ConcreteZPriorityQueue<E> implements ZPriorityQueue<E>{
+
+    Deque<E> queue = new ArrayDeque<>();
 
     @Override
     public void enqueue(E element, Integer priority) {
+        queue.offer(element);
+
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'enqueue'");
     }
@@ -16,14 +23,16 @@ public class ConcreteZPriorityQueue<E> implements ZPriorityQueue<E>{
 
     @Override
     public E peek(Integer priority) {
+        return queue.peek();
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+//        throw new UnsupportedOperationException("Unimplemented method 'peek'");
     }
 
     @Override
     public int size() {
+        return queue.size();
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'size'");
+//        throw new UnsupportedOperationException("Unimplemented method 'size'");
     }
 
     @Override
@@ -34,8 +43,9 @@ public class ConcreteZPriorityQueue<E> implements ZPriorityQueue<E>{
 
     @Override
     public boolean isEmpty() {
+        return queue.isEmpty();
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+//        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
     }
 
 }
